@@ -229,7 +229,7 @@ class NavigationTest {
         openAbout()
         onView(withId(R.id.activity_about)).check(matches(isDisplayed()))
         scenario.onActivity { activity ->
-            activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+            activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
         }
         delay()
         onView(withId(R.id.activity_about)).check(matches(isDisplayed()))
@@ -239,7 +239,7 @@ class NavigationTest {
         onView(withId(R.id.bnToThird)).check(doesNotExist())
 
         scenario.onActivity { activity ->
-            activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
+            activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         }
         delay()
         onView(withId(R.id.activity_about)).check(matches(isDisplayed()))
