@@ -167,6 +167,10 @@ class NavigationTest {
         }
         delay()
         onView(withId(R.id.fragment1)).check(matches(isDisplayed()))
+        onView(withId(R.id.bnToFirst)).check(doesNotExist())
+        onView(withId(R.id.bnToSecond)).check(matches(isDisplayed()))
+        onView(withId(R.id.bnToThird)).check(doesNotExist())
+        onView(withId(R.id.nav_view)).check(matches(isDisplayed()))
 
         scenario.onActivity { activity ->
             activity.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
