@@ -35,7 +35,7 @@ class NavigationTest {
                 if (mode) ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE
                 else ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         }
-            sleep(5000)
+            sleep(1000)
     }
 
     private fun fr1exist() {
